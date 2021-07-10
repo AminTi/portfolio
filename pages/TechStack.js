@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
   },
   spacer: {
-    margin: "5%",
+    margin: "3%",
   },
   spacer2: {
     margin: "8%",
