@@ -1,0 +1,37 @@
+import React from 'react'
+import color from "../components/color";
+import Box from "@material-ui/core/Box";
+import { makeStyles } from "@material-ui/core/styles";
+import Image from "next/image"
+import Link  from  "next/link"
+
+
+const useStyles = makeStyles((theme) => ({
+  pdf:{
+      width: "80%",
+    height: "700px",
+ 
+      
+  },    
+    spacer: {
+    margin: "5%",
+  },
+//   spacer2: {
+//     margin: "2%",
+//   },
+}));
+
+
+
+const PdfCpmnt = ({src}) => {
+      const classes = useStyles();
+    return (
+        <>
+   
+       <embed src={src}  src={src} alt="Picture of the author"   className={classes.pdf}/>
+        
+        </>
+    )
+}
+
+export default PdfCpmnt
