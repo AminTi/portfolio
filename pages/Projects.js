@@ -22,11 +22,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "80%",
   },
-
-  //   spacer: {
-  //     margin: "5%",
-  //   },
-  spacer2: {
+spacer2: {
     margin: "8%",
   },
   spacer3: {
@@ -39,9 +35,7 @@ export async function getStaticProps() {
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.ACCEESS_TOKEN_KEY,
   });
-
-  const res = await client.getEntries({ content_type: "portfolio" });
-
+const res = await client.getEntries({ content_type: "portfolio" });
   return {
     props: {
       portfolios: res.items,
