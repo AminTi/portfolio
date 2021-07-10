@@ -46,7 +46,7 @@ const res = await client.getEntries({ content_type: "portfolio" });
 const Projects = ({ portfolios }) => {
   const classes = useStyles();
   const [data, setData] = useState(null);
-
+  const test = []
   const arrTitle = [];
 
   portfolios.map((item) => {
