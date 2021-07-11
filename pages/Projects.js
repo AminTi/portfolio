@@ -9,6 +9,9 @@ import Box from "@material-ui/core/Box";
 import { createClient } from "contentful";
 import SubHeader from "../components/SubHeader";
 
+
+
+
 const useStyles = makeStyles((theme) => ({
   container: {
     background: color.black,
@@ -32,9 +35,10 @@ spacer2: {
 
 export async function getStaticProps() {
   const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.ACCEESS_TOKEN_KEY,
+    space: '822gsnozbtys',
+    accessToken: 'Q8TN4lOQ_s-jgscPjrCTpCX6SYTABc42QsIcWKZmZog',
   });
+
 const res = await client.getEntries({ content_type: "portfolio" });
   return {
     props: {
@@ -42,6 +46,7 @@ const res = await client.getEntries({ content_type: "portfolio" });
     },
   };
 }
+
 
 const Projects = ({ portfolios }) => {
   const classes = useStyles();
@@ -61,10 +66,7 @@ const Projects = ({ portfolios }) => {
 
   const ProjectsData =
     data === "All" || data === null ? portfolios : filtredData;
-
-  console.log(portfolios);
-
-  return (
+return (
     <Grid
       container
       direction="column"
