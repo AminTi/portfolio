@@ -16,18 +16,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexDirection: "column",
     background: color.black,
-    // padding: "20px",
-
-    // backgroundImage: `url("/heroimage.jpg")`,
     minHeight: "100vh",
     minWidth: "100vw",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-
-    //overlay
-    // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/heroimage.jpg")`,
-  },
+    
+    },
   title: {
     color: color.green,
   },

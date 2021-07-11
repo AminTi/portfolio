@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     background: color.green,
     borderRadius: "100px",
     minWidth: "500px",
-    padding: "5px 10px",
+    padding: "5px 20px",
     margin: "5% ",
     [theme.breakpoints.down("sm")]: {
       minWidth: "70%",
@@ -31,11 +31,10 @@ const useStyles = makeStyles((theme) => ({
 
 
   text: {
-    fontWeight: "bold",
-     color: color.white,
-    
    
-  },
+     color: color.white,
+     
+},
   icon: {
     fontWeight: "bold",
 
