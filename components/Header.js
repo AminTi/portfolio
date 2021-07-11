@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   header: {
-    fontSize: "55px",
+    fontSize: "40px",
     fontWeight: "bold",
     lineHeight: "84px",
     letterSpacing: "1.2px",
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
 
     [theme.breakpoints.down("sm")]: {
-      fontSize: "50px",
+      fontSize: "40px",
       textAlign: "center",
       letterSpacing: "0",
       lineHeight: "50px",

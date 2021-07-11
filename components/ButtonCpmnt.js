@@ -21,32 +21,24 @@ const useStyles = makeStyles((theme) => ({
     margin: "5% ",
     [theme.breakpoints.down("sm")]: {
       minWidth: "70%",
-      padding: "10px 10px",
+      padding: "10px 15px",
     },
     [theme.breakpoints.down("xs")]: {
       minWidth: "90%",
-      padding: "0px 10px",
+      padding: "0px 15px",
     },
   },
-  text: {
-    // fontSize: "500px",
-    // fontWeight: "bold",
-  },
+
 
   text: {
     fontWeight: "bold",
-    fontSize: "18px",
-    color: color.white,
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "16px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "16px",
-    },
+     color: color.white,
+    
+   
   },
   icon: {
     fontWeight: "bold",
-    fontSize: "16px",
+
   },
 }));
 

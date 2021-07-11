@@ -26,11 +26,10 @@ const useStyles = makeStyles((theme) => ({
   },
   call: {
     color: color.white,
-    // marginRight: "auto",
-    padding: "10px 10px",
+   padding: "10px 10px",
   },
 
-  test: {
+  phone: {
     margin: 5,
   },
 }));
@@ -50,7 +49,7 @@ const Contact = () => {
 
       <SubHeader text={"Contact"} colorgreen />
       <IconButton className={classes.call}>
-        <CallIcon className={classes.test} />
+        <CallIcon className={classes.phone} />
         <span>
           <span />
           <span />
