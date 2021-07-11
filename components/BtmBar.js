@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
   copyright: {
     color: color.black,
+  
 
     [theme.breakpoints.down("xs")]: {
       margin: "0 auto",

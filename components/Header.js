@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
   header: {
     fontSize: "30px",
-    fontWeight: "bold",
+   
     lineHeight: "84px",
     letterSpacing: "1.2px",
     color: color.white,
@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "50px",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "30px",
       textAlign: "center",
       letterSpacing: "0",
       lineHeight: "50px",
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color: color.green,
     fontStyle: "HelveticaNeue",
     fontSize: "50px",
-    fontWeight: "bold",
+ 
     lineHeight: "84px",
     letterSpacing: "1.2px",
     [theme.breakpoints.down("xs")]: {

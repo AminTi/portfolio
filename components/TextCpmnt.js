@@ -26,7 +26,7 @@ const TextCpmnt = ({ text }) => {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
-      <Box className={classes.root}>{text}</Box>;
+      <p className={classes.root}>{text}</p>;
     </Box>
   );
 };
