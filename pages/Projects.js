@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    width: "80%",
+   width: "80%",
   },
 spacer2: {
     margin: "8%",
@@ -80,7 +80,7 @@ return (
       <Box className={classes.spacer3} />
       <Select text={["Javascript", "React", "Htlm-Css"]} storeData={setData} />
       <Box className={classes.spacer3} />
-      <Container container className={classes.subContainer} maxWidth="ms">
+      <Container container className={classes.subContainer} maxWidth="xl">
         {ProjectsData &&
           ProjectsData.map((item, index) => {
             return (

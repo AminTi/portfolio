@@ -20,8 +20,9 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 300,
-    // margin: "1%",
+     margin: "1%",
     borderRadius: "10px",
+
 
     [theme.breakpoints.down("sm")]: {
       minWidth: 250,
@@ -47,21 +48,22 @@ const useStyles = makeStyles((theme) => ({
     color: color.white,
     fontWeight: "bold",
     fontSize: "20px",
+
   },
   atag: {
-    margin: "1%",
+  
     textDecoration: "none",
     color: color.white,
     fontWeight: "bold",
-    fontWeight: "bold",
-    fontSize: "20px",
+  
+  
   },
 }));
 
 export default function RecipeReviewCard({ photo, key, text, url }) {
   const classes = useStyles();
   return (
-    <a href={url} className={classes.atag}>
+    <>
       <Card className={classes.root} key={key}>
         <CardMedia className={classes.media} image={photo} title={text} />
         <CardContent className={classes.text}>
@@ -71,10 +73,12 @@ export default function RecipeReviewCard({ photo, key, text, url }) {
             component="p"
             className={classes.Typography}
           >
+         < a href={url} className={classes.atag}>
             {text}
+            </a>
           </Typography>
         </CardContent>
       </Card>
-    </a>
+    </>
   );
 }
