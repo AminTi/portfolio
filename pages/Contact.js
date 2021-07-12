@@ -50,7 +50,7 @@ const Contact = () => {
       <SubHeader text={"Contact"} colorgreen />
       <IconButton className={classes.call}>
         <CallIcon className={classes.phone} />
-        <span>
+        <span type="tel">
           <span />
           <span />
           {`${" 070-761 78 15"}`}
