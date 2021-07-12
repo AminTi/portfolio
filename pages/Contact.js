@@ -49,7 +49,7 @@ const Contact = () => {
       <SubHeader text={"Contact"} colorgreen />
       <IconButton className={classes.call}>
         <CallIcon className={classes.phone} />
-        <a href="070-761 78 15">
+        <a href="tel:070-761 78 15">
           <span />
           <span />
           {`${" 070-761 78 15"}`}
