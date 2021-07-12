@@ -8,7 +8,7 @@ import Link  from  "next/link"
 
 const useStyles = makeStyles((theme) => ({
   pdf:{
-    width: "400px",
+    width: "80%",
     minHeight: "500px",
     background: color.white,
  

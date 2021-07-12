@@ -8,6 +8,7 @@ import Select from "../components/Select";
 import Box from "@material-ui/core/Box";
 import { createClient } from "contentful";
 import SubHeader from "../components/SubHeader";
+import ImageCpnt from "../components/ImageCpnt";
 
 
 
@@ -90,7 +91,7 @@ return (
                 text={item.fields.title}
                 url={item.fields.url}
               />
-            );
+              );
           })}
       </Container>
       <Box className={classes.spacer2} />

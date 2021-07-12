@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
  padding: "56%", // 16:9
  height: "100%",
   width: '100%',
+  objectFit: "contain"
   
   },
 
