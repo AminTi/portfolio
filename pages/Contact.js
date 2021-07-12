@@ -45,12 +45,11 @@ const Contact = () => {
       alignItems="center"
       className={classes.container}
     >
-      <Box className={classes.spacer} />
-
+       <Box className={classes.spacer} />
       <SubHeader text={"Contact"} colorgreen />
       <IconButton className={classes.call}>
         <CallIcon className={classes.phone} />
-        <span type="tel">
+        <a href="070-761 78 15">
           <span />
           <span />
           {`${" 070-761 78 15"}`}
