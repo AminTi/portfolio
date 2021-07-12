@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("xs")]: {
       margin: "0 auto",
+      marginBottom: "2%",
     },
   },
   icons: {
