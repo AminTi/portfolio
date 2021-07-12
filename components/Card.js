@@ -38,14 +38,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     background: color.green,
     color: color.white,
-    fontWeight: "bold",
-    fontSize: "20px",
+
+
   },
 
   Typography: {
     color: color.white,
-    fontWeight: "bold",
-    fontSize: "20px",
+  
+  
 
   },
   atag: {
