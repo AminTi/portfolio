@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("xs")]: {
       margin: "0 auto",
-      marginBottom: "2%",
+      
+      paddingBottom: "10px"
     },
   },
   icons: {
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 const BtmBar = () => {
   const classes = useStyles();
   return (
-    <div>
+    <>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar variant="dense" className={classes.tlbr}>
           <Typography color="inherit" className={classes.copyright}>
@@ -76,7 +77,7 @@ const BtmBar = () => {
           </Box>
         </Toolbar>
       </AppBar>
-    </div>
+    </>
   );
 };
 
