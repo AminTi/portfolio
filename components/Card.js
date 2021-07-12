@@ -22,9 +22,7 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 300,
      margin: "1%",
     borderRadius: "10px",
-
-
-    [theme.breakpoints.down("sm")]: {
+   [theme.breakpoints.down("sm")]: {
       minWidth: 250,
     },
   },

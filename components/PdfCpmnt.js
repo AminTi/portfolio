@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   pdf:{
       width: "80%",
     height: "700px",
+    background: color.white,
  
       
   },    
@@ -28,7 +29,12 @@ const PdfCpmnt = ({src}) => {
     return (
         <>
    
-       <embed src={src}  src={src} alt="Picture of the author"   className={classes.pdf}/>
+       {/* <a target={src}  alt="resume"   className={classes.pdf}> */}
+
+       <object  type="application/pdf" data={src}  className={classes.pdf}>
+     
+</object>
+     
         
         </>
     )
