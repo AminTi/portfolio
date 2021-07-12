@@ -27,9 +27,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
-    padding: "56%", // 16:9
-    width: "100%",
-    height: "100%",
+ padding: "56%", // 16:9
+ height: "100%",
+  width: '100%',
+  
   },
 
   text: {
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   
     textDecoration: "none",
     color: color.white,
-    fontWeight: "bold",
+    // fontWeight: "bold",
   
   
   },
