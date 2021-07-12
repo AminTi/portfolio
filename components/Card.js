@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   
     textDecoration: "none",
     color: color.white,
-    // fontWeight: "bold",
+    fontWeight: "bold",
   
   
   },
