@@ -10,6 +10,7 @@ import CallIcon from "@material-ui/icons/Call";
 import Snackbars from "../components/SnackBar";
 import PdfCpmnt from "../components/PdfCpmnt"
 import ButtonCpmnt from "../components/ButtonCpmnt"
+import Link from "next/link"
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -28,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
   const classes = useStyles();
 
+  const pdfHandler = (e)=>{
+ e.preventDefault()
+ window.open("/amintiti2cv.pdf");
+  }
+
   return (
     <Grid
       container
@@ -40,8 +46,10 @@ const Resume = () => {
      <SubHeader text={"CV"} colorgreen/>
      <Box className={classes.spacer2}/>
      <PdfCpmnt src="/amintiti2cv.pdf"/>
-     <ButtonCpmnt  text={'Download'} download/>
-    <Box className={classes.spacer2}/>
+  
+     <ButtonCpmnt  text={'Download'} download  clickHandler={pdfHandler}/>
+
+       <Box className={classes.spacer2}/>
     
       
  </Grid>
