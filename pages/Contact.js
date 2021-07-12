@@ -32,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
   phone: {
     margin: 5,
   },
+  number:{
+    textDecoration: "none",
+    color: color.white,
+  }
 }));
 
 const Contact = () => {
@@ -49,10 +53,10 @@ const Contact = () => {
       <SubHeader text={"Contact"} colorgreen />
       <IconButton className={classes.call}>
         <CallIcon className={classes.phone} />
-        <a href="tel:070-761 78 15">
+        <a href="tel:070-761 78 15" className={classes.number}>
           <span />
           <span />
-          {`${" 070-761 78 15"}`}
+          {`${" 070-761 78 15"}`} 
         </a>
       </IconButton>
 
