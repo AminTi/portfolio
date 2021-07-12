@@ -53,7 +53,7 @@ const Contact = () => {
           <span />
           <span />
           {`${" 070-761 78 15"}`}
-        </span>
+        </a>
       </IconButton>
 
       <Box className={classes.spacer3} />
