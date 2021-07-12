@@ -8,8 +8,8 @@ import Link  from  "next/link"
 
 const useStyles = makeStyles((theme) => ({
   pdf:{
-      width: "80%",
-    height: "700px",
+    width: "400px",
+    minHeight: "500px",
     background: color.white,
  
       
@@ -29,11 +29,9 @@ const PdfCpmnt = ({src}) => {
     return (
         <>
    
-       {/* <a target={src}  alt="resume"   className={classes.pdf}> */}
+    
 
-       <object  type="application/pdf" data={src}  className={classes.pdf}>
-     
-</object>
+       <object  type="application/pdf" data={src}  className={classes.pdf}></object>
      
         
         </>
