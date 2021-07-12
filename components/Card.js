@@ -19,7 +19,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 300,
+    minWidth: 200,
      margin: "1%",
     borderRadius: "10px",
    [theme.breakpoints.down("sm")]: {
