@@ -19,19 +19,22 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 200,
-     margin: "1%",
+    // display: "flex",
+    // justifyContent: "space-around",
+    // flexDirection: "column",
+    // minWidth: 200,
+    // minHeight: 300,
+    width: 300,
+    margin: "1%",
+
     borderRadius: "10px",
-   [theme.breakpoints.down("sm")]: {
-      minWidth: 250,
+    [theme.breakpoints.down("sm")]: {
+      margin: "2%",
     },
   },
   media: {
- padding: "56%", // 16:9
- height: "100%",
-  width: '100%',
-  objectFit: "contain"
-  
+    height: 200,
+    width: "100%",
   },
 
   text: {
@@ -40,23 +43,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     background: color.green,
     color: color.white,
-
-
   },
 
   Typography: {
     color: color.white,
-  
-  
-
   },
   atag: {
-  
     textDecoration: "none",
     color: color.white,
     fontWeight: "bold",
-  
-  
   },
 }));
 
@@ -66,6 +61,7 @@ export default function RecipeReviewCard({ photo, key, text, url }) {
     <>
       <Card className={classes.root} key={key}>
         <CardMedia className={classes.media} image={photo} title={text} />
+
         <CardContent className={classes.text}>
           <Typography
             variant="body2"
@@ -73,8 +69,8 @@ export default function RecipeReviewCard({ photo, key, text, url }) {
             component="p"
             className={classes.Typography}
           >
-         < a href={url} className={classes.atag}>
-            {text}
+            <a href={url} className={classes.atag}>
+              {text}
             </a>
           </Typography>
         </CardContent>

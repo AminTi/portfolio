@@ -9,9 +9,7 @@ import Box from "@material-ui/core/Box";
 import { createClient } from "contentful";
 import SubHeader from "../components/SubHeader";
 import ImageCpnt from "../components/ImageCpnt";
-
-
-
+import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -24,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-   width: "80%",
+    width: "80%",
   },
-spacer2: {
+  spacer2: {
     margin: "8%",
   },
   spacer3: {
@@ -36,11 +34,11 @@ spacer2: {
 
 export async function getStaticProps() {
   const client = createClient({
-    space: '822gsnozbtys',
-    accessToken: 'Q8TN4lOQ_s-jgscPjrCTpCX6SYTABc42QsIcWKZmZog',
+    space: "822gsnozbtys",
+    accessToken: "Q8TN4lOQ_s-jgscPjrCTpCX6SYTABc42QsIcWKZmZog",
   });
 
-const res = await client.getEntries({ content_type: "portfolio" });
+  const res = await client.getEntries({ content_type: "portfolio" });
   return {
     props: {
       portfolios: res.items,
@@ -48,11 +46,12 @@ const res = await client.getEntries({ content_type: "portfolio" });
   };
 }
 
-
 const Projects = ({ portfolios }) => {
+  console.log(portfolios);
+
   const classes = useStyles();
   const [data, setData] = useState(null);
-  const test = []
+  const test = [];
   const arrTitle = [];
 
   portfolios.map((item) => {
@@ -67,7 +66,7 @@ const Projects = ({ portfolios }) => {
 
   const ProjectsData =
     data === "All" || data === null ? portfolios : filtredData;
-return (
+  return (
     <Grid
       container
       direction="column"
@@ -91,7 +90,7 @@ return (
                 text={item.fields.title}
                 url={item.fields.url}
               />
-              );
+            );
           })}
       </Container>
       <Box className={classes.spacer2} />

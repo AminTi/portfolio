@@ -60,10 +60,7 @@ const TechStack = () => {
     "/images/image11.jpg",
     "/images/image12.jpg",
     "/images/image13.svg",
-   
-  
-  
-      ];
+  ];
 
   return (
     <Grid
@@ -78,7 +75,6 @@ const TechStack = () => {
       <Box className={classes.spacer3} />
       <Container className={classes.subContainer}>
         {arr.map((item) => {
-   
           return <ImageCpnt photo={item} />;
         })}
       </Container>
