@@ -87,17 +87,20 @@ const Form = () => {
     <>
       <form className={classes.form} onSubmit={formClickHandler}>
         <InputField
+          placeholder={"Epost"}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           value={email}
         />
         <InputField
+          placeholder={"Subject"}
           onChange={(e) => setSubject(e.target.value)}
           type="text"
           value={subject}
         />
         <InputField
           multiline
+          placeholder={"Message"}
           onChange={(e) => setMessage(e.target.value)}
           type="text"
           value={message}
