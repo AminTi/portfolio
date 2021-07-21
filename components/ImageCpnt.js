@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ImageCpnt({ photo }) {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <Avatar alt="Amin Titi" src={photo} className={classes.large} />
