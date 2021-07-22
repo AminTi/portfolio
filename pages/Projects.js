@@ -47,22 +47,28 @@ export async function getStaticProps() {
 }
 
 const Projects = ({ portfolios }) => {
-  console.log(portfolios);
+
 
   const classes = useStyles();
   const [data, setData] = useState(null);
   const test = [];
   const arrTitle = [];
 
-  portfolios.map((item) => {
+
+   portfolios.map((item) => {
     arrTitle.push(item.fields.tech);
   });
 
+  const filterTitle = arrTitle.filter((item, pos) =>{
+    return arrTitle.indexOf(item) == pos;
+  }) 
+  
   let filtredData =
     data &&
     portfolios.filter((item) => {
       return item.fields.tech == data;
     });
+
 
   const ProjectsData =
     data === "All" || data === null ? portfolios : filtredData;
@@ -78,7 +84,7 @@ const Projects = ({ portfolios }) => {
       <Box className={classes.spacer3} />
       <SubHeader text={"Projects"} colorgreen />
       <Box className={classes.spacer3} />
-      <Select text={["Javascript", "React", "Htlm-Css"]} storeData={setData} />
+      <Select text={filterTitle} storeData={setData} />
       <Box className={classes.spacer3} />
       <Container container className={classes.subContainer} maxWidth="xl">
         {ProjectsData &&
