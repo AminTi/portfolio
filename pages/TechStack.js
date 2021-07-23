@@ -56,10 +56,10 @@ const TechStack = () => {
     "/images/image6.svg ",
     "/images/image7.svg ",
     "/images/image9.svg ",
-    "/images/image14.jpg",
+  
     "/images/image11.jpg",
     "/images/image12.jpg",
-    "/images/image13.svg",
+    "/images/image13.png",
   ];
 
   return (
@@ -74,8 +74,8 @@ const TechStack = () => {
       <SubHeader text={"Skills"} colorgreen />
       <Box className={classes.spacer3} />
       <Container className={classes.subContainer}>
-        {arr.map((item) => {
-          return <ImageCpnt photo={item} />;
+        {arr.map((item ,index) => {
+          return <ImageCpnt photo={item}  key={index}/>;
         })}
       </Container>
       <Box className={classes.spacer} />
