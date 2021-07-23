@@ -35,9 +35,11 @@ const useStyles = makeStyles((theme) => ({
 export default function SelectField({ text, storeData }) {
   const classes = useStyles();
   const [state, setState] = useState("");
+  const [selectVal, setSelectVal] = useState("All");
 
   const handleChange = async (e) => {
     let search = e.target.value;
+    setSelectVal(search)
     localStorage.clear();
     await localStorage.setItem("search", search);
     await storeData(localStorage.getItem("search"));
@@ -46,10 +48,10 @@ export default function SelectField({ text, storeData }) {
   return (
     <div>
       <FormControl variant="outlined" className={classes.formControl}>
-        <Select
+      <Select
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
-          value={state}
+          value={selectVal}
           className={classes.select}
           onChange={handleChange}
         >

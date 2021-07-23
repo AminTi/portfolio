@@ -61,32 +61,14 @@ export async function getStaticProps() {
 }
 
 const TechStack = ({teckstack}) => {
-
+  const classes = useStyles();
   const teckStackArr = []
 
-   teckstack.map((item) => {
+teckstack.map((item) => {
     teckStackArr.push(item.fields.techimage.fields.file.url);
   });
-
-console.log(teckStackArr)
- 
-  const classes = useStyles();
-  const arr = [
-    "/images/image1.svg",
-    "/images/image3.svg",
-    "/images/image.svg",
-    "/images/image4.svg ",
-    "/images/image5.svg ",
-    "/images/image6.svg ",
-    "/images/image7.svg ",
-    "/images/image9.svg ",
   
-    "/images/image11.jpg",
-    "/images/image12.jpg",
-    "/images/image13.png",
-  ];
-
-  return (
+return (
     <Grid
       container
       direction="column"
@@ -94,7 +76,7 @@ console.log(teckStackArr)
       alignItems="center"
       className={classes.container}
     >
-      <Box className={classes.spacer} />
+    <Box className={classes.spacer} />
       <SubHeader text={"Skills"} colorgreen />
       <Box className={classes.spacer3} />
       <Container className={classes.subContainer}>
