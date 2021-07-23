@@ -10,6 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CallIcon from "@material-ui/icons/Call";
 import Snackbars from "../components/SnackBar";
 import Container from "@material-ui/core/Container";
+import { createClient } from "contentful";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -45,7 +46,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TechStack = () => {
+export async function getStaticProps() {
+  const client = createClient({
+    space: "822gsnozbtys",
+    accessToken: "Q8TN4lOQ_s-jgscPjrCTpCX6SYTABc42QsIcWKZmZog",
+  });
+
+  const res = await client.getEntries({ content_type: "teckstack" });
+  return {
+    props: {
+      teckstack: res.items,
+    },
+  };
+}
+
+const TechStack = ({teckstack}) => {
+
+  const teckStackArr = []
+
+   teckstack.map((item) => {
+    teckStackArr.push(item.fields.techimage.fields.file.url);
+  });
+
+console.log(teckStackArr)
+ 
   const classes = useStyles();
   const arr = [
     "/images/image1.svg",
@@ -74,7 +98,7 @@ const TechStack = () => {
       <SubHeader text={"Skills"} colorgreen />
       <Box className={classes.spacer3} />
       <Container className={classes.subContainer}>
-        {arr.map((item ,index) => {
+        {teckStackArr && teckStackArr.map((item ,index) => {
           return <ImageCpnt photo={item}  key={index}/>;
         })}
       </Container>
