@@ -67,8 +67,11 @@ const Form = () => {
     } else {
       fomrsFree(email, subject, message);
     }
-    e.target.reset();
-  };
+
+    setEmail("")
+    setSubject("")
+    setMessage("")
+   };
 
   const fomrsFree = (email, subject, message) => {
     axios({
