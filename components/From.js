@@ -68,6 +68,7 @@ const Form = () => {
       fomrsFree(email, subject, message);
     }
 
+
     setEmail("")
     setSubject("")
     setMessage("")
