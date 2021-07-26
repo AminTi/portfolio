@@ -18,13 +18,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   copyright: {
+    fontSize: "14px",
     color: color.black,
-  
-
+    paddingBottom: "0px",
     [theme.breakpoints.down("xs")]: {
       margin: "0 auto",
-      
-      paddingBottom: "10px"
+      paddingBottom: "10px",
     },
   },
   icons: {
