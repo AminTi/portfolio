@@ -91,7 +91,7 @@ export default function Drawer({ openDrawer, setOpen }) {
     {
       text: (
         <Link href="/TechStack" className={classes.link}>
-          <Typography variant="h6">Teck-Stack</Typography>
+          <Typography variant="h6">Tech-Stack</Typography>
         </Link>
       ),
     },
