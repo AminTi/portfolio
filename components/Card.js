@@ -21,8 +21,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 300,
     margin: "1%",
-
     borderRadius: "10px",
+    "&:hover": {
+      opacity: "0.4",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: "2%",
     },
@@ -55,20 +57,20 @@ export default function RecipeReviewCard({ photo, key, text, url }) {
   return (
     <>
       <Card className={classes.root} key={key}>
-        <CardMedia className={classes.media} image={photo} title={text} />
+        <a href={url} target="_blank" className={classes.atag}>
+          <CardMedia className={classes.media} image={photo} title={text} />
 
-        <CardContent className={classes.text}>
-          <Typography
-            variant="body2"
-            color="textSecondary"
-            component="p"
-            className={classes.Typography}
-          >
-            <a href={url} className={classes.atag}>
-              {text}
-            </a>
-          </Typography>
-        </CardContent>
+          <CardContent className={classes.text}>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+              className={classes.Typography}
+            >
+              <Typography className={classes.atag}>{text}</Typography>
+            </Typography>
+          </CardContent>
+        </a>
       </Card>
     </>
   );

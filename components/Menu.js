@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
+    cursor: "default",
     padding: "5px 10px",
     fontWeight: "bold",
     fontSize: "18px",
@@ -48,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cv: {
+    cursor: "default",
     color: `${color.green}`,
     fontSize: "18px",
     padding: "5px 10px",
