@@ -47,28 +47,24 @@ export async function getStaticProps() {
 }
 
 const Projects = ({ portfolios }) => {
-
-
   const classes = useStyles();
   const [data, setData] = useState(null);
   const test = [];
   const arrTitle = [];
 
-
-   portfolios.map((item) => {
+  portfolios.map((item) => {
     arrTitle.push(item.fields.tech);
   });
 
-  const filterTitle = arrTitle.filter((item, pos) =>{
+  const filterTitle = arrTitle.filter((item, pos) => {
     return arrTitle.indexOf(item) == pos;
-  }) 
-  
+  });
+
   let filtredData =
     data &&
     portfolios.filter((item) => {
       return item.fields.tech == data;
     });
-
 
   const ProjectsData =
     data === "All" || data === null ? portfolios : filtredData;
