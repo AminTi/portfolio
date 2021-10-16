@@ -12,8 +12,6 @@ import ButtonCpmnt from "../components/ButtonCpmnt";
 import { useRouter } from "next/router";
 import SubHeader from "../components/SubHeader";
 
-
-
 const useStyles = makeStyles({
   container: {
     background: color.black,
@@ -28,16 +26,13 @@ const useStyles = makeStyles({
   },
 });
 
-
-
 const About = () => {
   const classes = useStyles();
-    const router = useRouter();
+  const router = useRouter();
 
-  const ClickHandler = ()=>{
-router.push('Resume')
-  }
-
+  const ClickHandler = () => {
+    router.push("Resume");
+  };
 
   return (
     <Grid
@@ -56,9 +51,9 @@ router.push('Resume')
       <Box className={classes.spacer2} />
 
       <TextCpmnt
-        text={`Analytisk och driven frontend-utvecklare som gillar teknik och människorna som använder den. Jag har ett gott öga för detaljer och en bra överblick för sammanhang och helhet. Jag eftersträvar alltid att ta till mig ny kunskap och som person är jag kreativ, hjälpsam och definitivt en lagspelare.`}
+        text={`Social och självständig  frontend-utvecklare som gillar att dela med sig. Jag har ett gott öga för detaljer och en bra överblick för sammanhang och helhet. Jag eftersträvar alltid att ta till mig ny kunskap och som person är jag kreativ, hjälpsam, Analytisk ,driven och definitivt en lagspelare.`}
       />
-      <ButtonCpmnt text="Resume" arrow   clickHandler={ClickHandler}/>
+      <ButtonCpmnt text="Resume" arrow clickHandler={ClickHandler} />
 
       <Box className={classes.spacer} />
       <Box className={classes.spacer2} />
