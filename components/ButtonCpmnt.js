@@ -7,7 +7,7 @@ import color from "./color";
 import IconButton from "@material-ui/core/IconButton";
 import SendIcon from "@material-ui/icons/Send";
 import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
-
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 const useStyles = makeStyles((theme) => ({
   btn: {
@@ -29,19 +29,23 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-
   text: {
-   
-     color: color.white,
-     
-},
+    color: color.white,
+  },
   icon: {
     fontWeight: "bold",
-
   },
 }));
 
-const ButtonCpmnt = ({ text, download, send, value, type, clickHandler }) => {
+const ButtonCpmnt = ({
+  text,
+  download,
+  send,
+  value,
+  type,
+  ArrowBack,
+  clickHandler,
+}) => {
   const classes = useStyles();
 
   const returnIcon = () => {
@@ -49,6 +53,8 @@ const ButtonCpmnt = ({ text, download, send, value, type, clickHandler }) => {
       return <SendIcon className={classes.size} />;
     } else if (download) {
       return <CloudDownloadIcon className={classes.size} />;
+    } else if (ArrowBack) {
+      return <ArrowBackIcon className={classes.size} />;
     } else {
       return <ArrowForwardIcon className={classes.size} />;
     }
