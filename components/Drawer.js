@@ -67,13 +67,13 @@ export default function Drawer({ openDrawer, setOpen }) {
         </Link>
       ),
     },
-    {
-      text: (
-        <Link href="/Projects">
-          <Typography variant="h6">Projects</Typography>
-        </Link>
-      ),
-    },
+    // {
+    //   text: (
+    //     <Link href="/Projects">
+    //       <Typography variant="h6">Projects</Typography>
+    //     </Link>
+    //   ),
+    // },
     {
       text: (
         <Link href="/About">

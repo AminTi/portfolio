@@ -37,7 +37,7 @@ const HeromoImage = () => {
   const router = useRouter();
 
   const ClickHandler = () => {
-    router.push("/Projects");
+    router.push("/About");
   };
   return (
     <Container className={classes.Heroimg} maxWidth="xl">
@@ -49,7 +49,7 @@ const HeromoImage = () => {
       <Header text={`${"Hi I'm Amin Titi. I build user interfaces"}`} />
       <Box className={classes.spacer} />
 
-      <ButtonCpmnt text={"Projects"} clickHandler={ClickHandler} />
+      <ButtonCpmnt text={"About me"} clickHandler={ClickHandler} />
     </Container>
   );
 };

@@ -31,6 +31,8 @@ const useStyles = makeStyles((theme) => ({
 
   text: {
     color: color.white,
+    fontWeight: "bold",
+
   },
   icon: {
     fontWeight: "bold",

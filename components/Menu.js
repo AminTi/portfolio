@@ -112,11 +112,11 @@ export default function MenuAppBar() {
               Home
             </Typography>
           </Link>
-          <Link href="/Projects">
+          {/* <Link href="/Projects">
             <Typography variant="h6" className={classes.title}>
               Projects
             </Typography>
-          </Link>
+          </Link> */}
           <Link href="/About">
             <Typography variant="h6" className={classes.title}>
               About
