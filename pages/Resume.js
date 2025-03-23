@@ -31,7 +31,7 @@ const Resume = () => {
 
   const pdfHandler = (e)=>{
  e.preventDefault()
- window.open("/amintiti2cv.pdf");
+ window.open("/aminnewcv.pdf");
   }
 
   return (
@@ -45,7 +45,7 @@ const Resume = () => {
      <Box className={classes.spacer}/>
      <SubHeader text={"CV"} colorgreen/>
      <Box className={classes.spacer2}/>
-     <PdfCpmnt src="/amintiti2cv.pdf"/>
+     <PdfCpmnt src="/aminnewcv.pdf"/>
   
      <ButtonCpmnt  text={'Download'} download  clickHandler={pdfHandler}/>
 

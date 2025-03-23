@@ -46,12 +46,12 @@ const About = () => {
       <Box className={classes.spacer2} />
       <SubHeader text={`${"  Amin Titi, Frontend-Developer"}`} colorgreen />
       <Box className={classes.spacer2} />
-      {<ImageCpnt photo={"/amintiti.jpg"} />}
+      {<ImageCpnt photo={"/aminme.jpg"} />}
 
       <Box className={classes.spacer2} />
 
       <TextCpmnt
-        text={`Social och självständig  frontend-utvecklare som gillar att dela med sig. Jag har ett gott öga för detaljer och en bra överblick för sammanhang och helhet. Jag eftersträvar alltid att ta till mig ny kunskap och som person är jag kreativ, hjälpsam, Analytisk ,driven och definitivt en lagspelare.`}
+        text={`I'm a Frontend Engineer passionate about building user-friendly, high-performance interfaces that look great and feel intuitive. With expertise in React, TypeScript, and modern frameworks, I thrive in collaborative environments where problem-solving and ownership drive success. I enjoy tackling complex challenges, optimizing for scalability, and continuously learning new tools to stay ahead. Committed to agile best practices and clean development principles, I create solutions that blend creativity with technical excellence. Let’s connect and build exceptional digital experiences together!`}
       />
       <ButtonCpmnt text="Resume" arrow clickHandler={ClickHandler} />
 
