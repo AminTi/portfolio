@@ -52,18 +52,18 @@ const Projects = ({ portfolios }) => {
   const test = [];
   const arrTitle = [];
 
-  portfolios.map((item) => {
-    arrTitle.push(item.fields.tech);
+  portfolios?.map((item) => {
+    arrTitle?.push(item.fields.tech);
   });
 
-  const filterTitle = arrTitle.filter((item, pos) => {
-    return arrTitle.indexOf(item) == pos;
+  const filterTitle = arrTitle?.filter((item, pos) => {
+    return arrTitle?.indexOf(item) == pos;
   });
 
   let filtredData =
     data &&
-    portfolios.filter((item) => {
-      return item.fields.tech == data;
+    portfolios?.filter((item) => {
+      return item?.fields?.tech == data;
     });
 
   const ProjectsData =
@@ -84,18 +84,18 @@ const Projects = ({ portfolios }) => {
       <Box className={classes.spacer3} />
       <Container container className={classes.subContainer} maxWidth="xl">
         {ProjectsData &&
-          ProjectsData.map((item, index) => {
+          ProjectsData?.map((item, index) => {
             return (
               <Card
                 key={index}
-                photo={item.fields.projectpic.fields.file.url}
-                text={item.fields.title}
-                url={item.fields.url}
+                photo={item?.fields?.projectpic?.fields?.file?.url}
+                text={item?.fields?.title}
+                url={item?.fields?.url}
               />
             );
           })}
       </Container>
-      <Box className={classes.spacer2} />
+      <Box className={classes?.spacer2} />
     </Grid>
   );
 };
